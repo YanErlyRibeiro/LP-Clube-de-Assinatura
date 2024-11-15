@@ -45,6 +45,9 @@
   --fw-base: 400;
   --fw-md: 500;
   --fw-bold: 700;
+
+  --py-lg: 1.25rem;
+  --px-lg: 1.25rem;
 }
 
  html {
@@ -69,9 +72,14 @@
   color: inherit;
  }
 
- @media (width >= 80em) {
+
+
+ @media (width >= 64em) {
   :root {
     --fs-md: 2rem;
     --fs-2xl: 3rem;
+
+    --py-lg: 3.5rem;
+    --px-lg: 1.5
   }
  }

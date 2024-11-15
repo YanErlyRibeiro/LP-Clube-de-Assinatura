@@ -1,0 +1,23 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+
+  font: var(--fw-bold) var(--fs-ms)/normal var(--font-family);
+  color: var(--text-title);
+
+  border-radius: .5rem;
+  
+}
+
+.btn-sm {
+  padding: .75rem 1.25rem;
+  background-color: var(--pink-dark);
+}
+.btn-lg {
+  padding: .75rem 3.375rem;
+  background-color: var(--blue-dark);
+ 
+}
+

@@ -1,0 +1,26 @@
+section.hero {
+
+  & header {
+    & .flex {
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+ 
+}
+
+
+@media (width >= 64em ) {
+  section.hero {
+   & header {
+    & .flex {
+      padding-inline: 10rem ;
+     }
+
+     & img.desktop-only {
+      width: 14.375rem;
+     }
+    }
+
+  }
+}
