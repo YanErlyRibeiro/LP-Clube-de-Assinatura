@@ -1,0 +1,115 @@
+section.recept-book {
+  padding-top: 5.125rem;
+  & > div {
+    margin-inline: 1.25rem;
+    text-align: center;
+    position: relative;
+    & p {
+      font: var(--fw-md) 1rem/1.4 var(--font-family);
+      color: var(--text-body);
+    }
+  }
+  & img {
+    position: absolute;
+    width: 2.5rem ;
+    height: 2.5rem;
+
+    &[src*="book"] {
+      top: -50px;
+      right: 55px;
+      transform: rotate(15deg);
+    }
+    &[src*="globo"] {
+      bottom: -50px;
+      right: 0px;
+      transform: rotate(15deg);
+    }
+    &[src*="heart"] {
+      bottom: -30px;
+      left: -10px;
+      transform: rotate(-35deg);
+    }
+
+    
+  }
+}
+
+@media (width >= 64em) { 
+section.recept-book {
+  max-width: 80em;
+ 
+  & > div {
+      margin-inline: 7.5rem;
+      padding: 7.125rem 2rem 9.875rem;
+      &:hover {
+        cursor: pointer;
+      }
+
+      & p {
+        font: var(--fw-md) 1.5rem/2 var(--font-family);    
+        width: 90%;
+        height: 100%;
+        transition: color 2s 500ms ease;
+        &:hover {
+          color: blue; 
+        }
+        
+      }
+
+      & span {
+        font: var(--fw-bold) 1.5rem/2 var(--font-family);
+       
+      
+      }
+        
+      & span , p {
+        color: rgba(226, 231, 233, 0.50);
+      }
+      
+    }
+
+    & img {
+      position: absolute;
+      
+  
+      &[src*="book"] {
+        top: 33px;
+        right: 540px;
+        transform: rotate(15deg);
+        width: 4.5rem ;
+        height: 4.5rem;
+      
+      }
+      &[src*="globo"] {
+        bottom: 90px;
+        right: 115px;
+        transform: rotate(-15deg);
+        width: 4rem ;
+        height: 4rem;
+      }
+      &[src*="heart"] {
+        bottom: 90px;
+        left: 45px;
+        transform: rotate(100deg);
+        width: 4rem ;
+        height: 4rem;
+      }
+  }
+
+   
+}
+
+  @keyframes changeColor {
+    0% {
+      color: var(--text-body);
+    }
+
+    33% {
+      color: var(--text-body);
+    }
+
+    100% {
+      color: var(--text-body);
+    }
+  }
+}

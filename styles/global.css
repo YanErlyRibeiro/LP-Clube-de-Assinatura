@@ -52,15 +52,19 @@
 
  html {
   font-family: var(--font-family);
+
+ }
+ body {
+  background: linear-gradient(180deg, #00050A 0%, #00050A 100%);
  }
 
  h1 {
   color: var(--text-title);
-  font: var(--fw-bold) var(--fs-2xl)/normal inherit; 
+  font: var(--fw-bold) var(--fs-2xl)/normal var(--font-family); 
  }
 
  h2 {
-  font: var(--fw-bold) var(--fs-md)/normal inherit;
+  font: var(--fw-bold) var(--fs-md)/normal var(--font-family);
  }
 
  h2, p {

@@ -25,6 +25,8 @@
   margin-inline: auto;
 }
 
+
+
 @media (width >= 64em) {
   .content {
     --max-width: 80em;

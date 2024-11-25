@@ -1,20 +1,90 @@
 section.hero {
+  max-width: 375px;
+  background-image: url(../assets/images/bg-hero.png);
+  background-color: var(--shape-background);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 2rem;
 
   & header {
     & .flex {
       justify-content: space-between;
       align-items: center;
+
+      
     }
   }
- 
+
+ & .content {
+    & > div {
+      display: grid;
+      text-align: center;
+      gap: 1rem;
+     & h1 {
+      margin-top: 3rem;
+     }
+
+     & p {
+      font: var(--fw-base) .875rem/1.4 var(--font-family);
+      color: var(--text-body);
+      margin-bottom: 12rem;
+     }
+    }
+  }
+  
 }
+
+
 
 
 @media (width >= 64em ) {
   section.hero {
-   & header {
-    & .flex {
+    max-width: 80em;
+    background: url(../assets/images/bg-hero-desktop.png)  50% / cover no-repeat;
+    background-position: top;
+    background-color: var(--shape-background);
+    z-index: 1;
+    position: relative;    
+    
+    opacity: 0;
+    animation: fadeIn 4s ease-in-out forwards;
+
+    &::before {
+      content: '';
+      width: inherit;
+      height: inherit;
+
+      background: var(--pink-low);
+      bottom: 0 ;
+      left: 0;
+      z-index: -1;
+    }
+
+    & header {
+      
+      & .flex {
+  
       padding-inline: 10rem ;
+      z-index: 1;
+     }
+     
+    }
+    & .content {
+     & > div {
+    margin-block: 10.25rem 29.375rem ;
+    margin-inline: auto;
+    width: 41rem;
+    gap: 2rem;
+   
+   
+    & p {
+      font: var(--fw-base) 1.25rem/1.4 var(--font-family);
+      margin-bottom: 6rem;
+
+      /* opacity: 0; */
+      animation: fadeIn 6s 500ms;
+    }
      }
 
      & img.desktop-only {
@@ -23,4 +93,16 @@ section.hero {
     }
 
   }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    
+    to {
+      opacity: 1;
+    }
+  }
+
+  
 }
